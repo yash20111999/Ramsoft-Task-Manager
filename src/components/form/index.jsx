@@ -18,7 +18,7 @@ const style = {
   pb: 5,
 };
 
-const TaskForm = ({ open = false, newTask, setNewTask, addNewTask, handleCancel }) => {
+const TaskForm = ({ open = false, newTask, setNewTask, addNewTask, handleCancel, edit }) => {
 
   // Handle Change value in Every field
   const handleChange = (event) => {
@@ -103,7 +103,7 @@ const TaskForm = ({ open = false, newTask, setNewTask, addNewTask, handleCancel 
     <div>
       <Modal open={open} aria-labelledby="parent-modal-title" aria-describedby="parent-modal-description">
         <Box sx={{ ...style, width: 600 }}>
-          <div className="form__header">{newTask?.heading === ''?'Add New Task':'Edit Task'}</div>
+          <div className="form__header">{!edit?'Add New Task':'Edit Task'}</div>
 
           <form data-testid="task-form" className="form__container" onSubmit={addNewTask}>
             <div className="form__field">

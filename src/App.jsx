@@ -182,7 +182,7 @@ export default function App() {
                       onStatusChange={handleOnStatusChange}
                       onDeleteTask={handleDeleteTodoTask}
                       onEditTask={handleEditTodoTast}
-                      onViewTask={()=>handleViewTask(task)}
+                      onViewTask={() => handleViewTask(task)}
                     />
                   </div>
                 ))}
@@ -202,20 +202,21 @@ export default function App() {
       </div>
       {/* Popup for new task */}
 
-        <TaskForm
-          open={openAddNewTask}
-          addNewTask={addNewTask}
-          handleCancel={handleCancel}
-          newTask={newTask}
-          setNewTask={setNewTask}
+      <TaskForm
+        open={openAddNewTask}
+        addNewTask={addNewTask}
+        handleCancel={handleCancel}
+        newTask={newTask}
+        setNewTask={setNewTask}
+        edit={edit}
       />
       {/* Popup for Task Detail */}
 
-        <TaskDetail
-          open={openViewTask}
-          viewTask={viewTask}
-          onViewTask={setOpenViewTask}
-        />
+      <TaskDetail
+        open={openViewTask}
+        viewTask={viewTask}
+        onViewTask={setOpenViewTask}
+      />
     </div>
   );
 }

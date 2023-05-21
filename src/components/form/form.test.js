@@ -21,7 +21,7 @@ describe("The form's elements", () => {
         setNewTask={jest.fn()}
       />
     );
-    const headingElement = screen.getByText("Edit Task");
+    const headingElement = screen.getByText("Add New Task");
     expect(headingElement).toBeTruthy();
   });
 
