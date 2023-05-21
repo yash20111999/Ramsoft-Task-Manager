@@ -1,0 +1,29 @@
+@import '../../mixins.scss';
+
+.card {
+    border: 1px solid rgba(149, 157, 165, 0.2);
+    border-radius: 6px;
+    width: 100%;
+    text-align: left;
+    &_detail {
+        width: 100%;
+        @include flexbox;
+        gap: 1rem;
+        font-size: 1rem;
+        text-align: left;
+        &_heading {
+            font-weight: 600;
+            margin: 5px 10px;
+        }
+        &_text {
+            margin: 5px 10px;
+        }
+        &_image{
+            @include flexbox(center,row,center);
+            width: 50%
+        }
+        button{
+            @include btn-style(var(--grey)); 
+        }
+    }
+}

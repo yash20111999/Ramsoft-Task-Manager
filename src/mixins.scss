@@ -1,0 +1,36 @@
+@mixin flexbox($justifyContent: flex-start, $direction: column, $alignItems: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin btn-style($bgcolor) {
+  color: var(--offWhite);
+  background-color: $bgcolor;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@mixin select-style($bgcolor) {
+  padding: 0.2rem;
+  color: var(--offWhite);
+  background-color: $bgcolor;
+  border-radius: 0.2rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@mixin heading-style($bgcolor) {
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  text-align: center;
+  z-index: 10;
+  background-color: $bgcolor;
+  border-radius: 8px 8px 0 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}

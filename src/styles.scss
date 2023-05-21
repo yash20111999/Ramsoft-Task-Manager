@@ -1,0 +1,81 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: var(--offWhite);
+  height: 100vh;
+  width:100vw;
+  margin: 0;
+}
+
+.header {
+  text-align: center;;
+  font-size: 3em;
+  padding: 2rem;
+  font-weight: 900;
+}
+
+.board {
+  margin: 10px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: var(--offWhite);
+  &__section {
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    
+    position: relative;
+    overflow: hidden;
+    &:not(:last-child) {
+      border-right: 1px solid black;
+    }
+    .card-container{
+      box-sizing: border-box;
+      background-color: var(--offWhite);
+      border-radius: 0.5rem;
+    }
+    button{
+      @include btn-style(var(--grey));
+    }
+    select{
+      @include select-style(var(--grey));
+    }
+  }
+
+
+  .heading {
+    padding: 1rem 0;
+    border-bottom: 1px solid black;
+    text-align: center;
+    z-index: 10;
+    background-color: var(--offWhite);
+    border-radius: 1rem 1rem 0 0;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .tasks-container {
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.button-container {
+  @include flexbox(center,column,center);
+  border-radius: 0 0 0 8px;
+  height: 55px;
+  .add-button {
+    @include btn-style(var(--grey));
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../mixins.scss';
+
+.form {
+  &__header {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    label {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    input {
+      font-size: 1rem;
+      padding: 10px 8px;
+      border-radius: 6px;
+      border: 1px solid #808080;
+    }
+  }
+  &__activity{
+    @include flexbox(space-between,row,center);
+    button{
+      @include btn-style(var(--grey));
+    }
+    width: 100%;
+  }
+}
+
+.form__container{
+  width: 100%;
+  @include flexbox;
+  gap:1rem;
+}
+
+.cancel-button {
+  margin-left: 10px !important;
+}
